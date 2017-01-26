@@ -11,7 +11,7 @@ import numpy as np
 def bary_tra(m1,m2): #m1 matrix dimensions should be 3*3 and m2 should be 1*3
 	vec_v2=np.subtract(m2,m1[0])
 	vec_v0=np.subtract(m1[2],m1[0])
-	vec_v1=np.subtract(m1[1]-m1[0])
+	vec_v1=np.subtract(m1[1],m1[0])
 
 	#Computing the dot products
 	dot00=np.dot(vec_v0,vec_v0)
