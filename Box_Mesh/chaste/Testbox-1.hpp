@@ -27,7 +27,6 @@ public:
    double ComputeConstantInUSourceTerm(const ChastePoint<2>& rX, Element<2,2>* pElement)
     {
        return 0;
-       // return rX[0]*rX[0] + rX[1]*rX[1];
     }
 
     double ComputeLinearInUCoeffInSourceTerm(const ChastePoint<2>& rX, Element<2,2>* pElement)
@@ -86,34 +85,6 @@ public:
 	    	}
 
             iter++;
-        }
-
-        TetrahedralMesh<2,2>::BoundaryElementIterator surf_iter
-            = mesh.GetBoundaryElementIteratorBegin();
-        while (surf_iter != mesh.GetBoundaryElementIteratorEnd())
-        {
-            unsigned node_index = (*surf_iter)->GetNodeGlobalIndex(0);
-            //double x = mesh.GetNode(node_index)->GetPoint()[0];
-            double y = mesh.GetNode(node_index)->GetPoint()[1];
-
-            //bcc.AddNeumannBoundaryCondition(*surf_iter, p_zero_boundary_condition);
-            // if ( (fabs(x-1.0) < 1e-6) || (fabs(y-1.0) < 1e-6) )
-            // {
-            //     bcc.AddNeumannBoundaryCondition(*surf_iter, p_zero_boundary_condition);
-            // }
-            
-            //UPDATED!
-            
-            // if((fabs(y-0)<1e-6))
-            // {
-            //      bcc.AddNeumannBoundaryCondition(*surf_iter, p_zero_boundary_condition);
-            // }
-
-            // if((fabs(y-3)<1e-6))
-            // {
-            //      bcc.AddNeumannBoundaryCondition(*surf_iter, p_one_boundary_condition);
-            // }
-            surf_iter++;
         }
 
         SimpleLinearEllipticSolver<2,2> solver(&mesh, &pde, &bcc);
