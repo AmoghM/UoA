@@ -29,4 +29,4 @@ def bary_tra(m1,m2): #m1 matrix dimensions should be 3*3 and m2 should be 1*3
 
 	#Check if the point lies
 
-	return ((u>=0) && (v>=0) && (u+v<1))
+	return ((u>=0) and (v>=0) and (u+v<1))
