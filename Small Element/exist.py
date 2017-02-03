@@ -19,27 +19,10 @@ def exist(p1,p2,p3,p):
 	z=np.multiply(p3,gamma)
 
 	foot=map(sum, zip(x,y,z))
-	# print "alpha: ",alpha
-	# print "beta:",beta
-	# print "gamma:",gamma
 
 	p=np.array(p)
 	if gamma >=0 and gamma <=1 and beta >=0 and beta <=1 and alpha >=0 and alpha <=1:
 		dist= np.linalg.norm(foot-p)
-		# sub=np.subtract(foot,p)
-		# dist=np.sqrt(sum(map(lambda x:x*x,sub)))
-		return dist
-		# return dist
-	
-	# else:
-	# 	print "doesn't exist"
-
-
-	# if gamma >=0 and gamma <=1:
-	# 	if beta >=0 and beta <=1:
-	# 		if alpha >=0 and alpha <=1:
-	# 			print "EXIST"
-			
 # if __name__ == '__main__':
 # 	p1=[-20.504449999999999,180.6155,-255.13049999999998]
 # 	p2=[ -20.704474999999999,180.77525,-255.61574999999999]
