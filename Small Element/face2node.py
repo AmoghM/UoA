@@ -7,8 +7,6 @@ def getnodes():
 				for i in range(1,4):
 					set_nodes.add(int(itr[i]))
 	face.close()
-	# print len(set_nodes) 18332 points only found.
-	
 	return set_nodes
 
 def getcoord():
