@@ -23,17 +23,8 @@ def DoesLies(m1,m2):
 	foot=np.array(foot)
 	print "Foot is:", foot
 	dist= np.linalg.norm(foot-m2)
-
-	# print gamma
-	# print beta
-	# print alpha
 	if gamma >=0 and gamma <=1 and beta >=0 and beta <=1 and alpha >=0 and alpha <=1:
-		print "HELLOo"
-		print "alpha: ",alpha
-		print "beta:",beta
-		print "gamma:",gamma
-		print m1
-		print dist
+		print "exist"
 	else:
 		print "doesn't exist"
 
