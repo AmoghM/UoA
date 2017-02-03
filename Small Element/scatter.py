@@ -73,24 +73,9 @@ with open("SURFACE4") as f:
 		y4.append(float(i[1]))
 		z4.append(float(i[2]))
 
-
-
-# # m2=[-30.541,162.887,-248.553]
-# m2=[-27.764745693679806,172.78633734565946,-259.54639878477093]
-
 ax1.scatter(x1, y1, z1, c="yellow")
 
 ax2.scatter(x2, y2, z2, c="yellow")
 ax3.scatter(x3, y3, z3, c="yellow")
 ax4.scatter(x4, y4, z4, c="yellow")
-
-# ax.scatter(m2[0],m2[1],m2[2], c="red",marker='^')
-
-
-
-
-# ax.set_xlabel('X Label')
-# ax.set_ylabel('Y Label')
-# ax.set_zlabel('Z Label')
-
 plt.show()
