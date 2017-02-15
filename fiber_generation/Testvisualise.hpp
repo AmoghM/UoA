@@ -5,7 +5,6 @@
 #include <fstream>
 #include <vector>
 #include "PetscSetupAndFinalize.hpp"
-// #include <c_vector>
 #include "VtkMeshWriter.hpp"
 // #include "AbstractConductivityModifier.hpp"
  #include <AbstractTetrahedralMesh.hpp>
@@ -39,39 +38,7 @@ public:
        c_vector<double, 3u> sheet_direction;
        c_vector<double, 3u> cross_direction;
        c_vector<double, 3u> fibre_direction;
-       
-       
-       // sheet_direction(0)=1;
-       // sheet_direction(1)=0;
-       // sheet_direction(2)=0;
-
-       // cross_direction(0)=0;
-       // cross_direction(1)=1;
-       // cross_direction(2)=0;
-
-       // fibre_direction(0)=1;
-       // fibre_direction(1)=0;
-       // fibre_direction(2)=0;
-
-       // for (int i=1;i<=195;i++)
-       // {
-       //      sheet_directions.push_back(sheet_direction);
-       //      cross_directions.push_back(cross_direction);
-       //      fibre_directions.push_back(fibre_direction);
-       //      // sheet_direction.push_back(1.0);
-       //      // sheet_direction.push_back(0.0);
-       //      // sheet_direction.push_back(0.0);
-            
-       //      // cross_direction.push_back(0.0);
-       //      // cross_direction.push_back(1.0);
-       //      // cross_direction.push_back(0.0);
-
-       //      // fibre_direction.push_back(0.0);
-       //      // fibre_direction.push_back(0.0);
-       //      // fibre_direction.push_back(1.0);
-       // }
-       
-
+   
         TrianglesMeshReader<3,3> mesh_reader("/people/amis080/Desktop/fibre/cube_mesh2.1");
         TetrahedralMesh<3,3> mesh; 
         mesh.ConstructFromMeshReader(mesh_reader);
@@ -90,11 +57,11 @@ public:
           fibre_direction(1)=0;
           fibre_direction(2)=1;
 
-          // double xx=(elt_iter->CalculateCentroid())(0);
-          // double yy=(elt_iter->CalculateCentroid())(1);
+          double xx=(elt_iter->CalculateCentroid())(0);
+          double yy=(elt_iter->CalculateCentroid())(1);
           double zz=(elt_iter->CalculateCentroid())(2);
 
-          //cout<<zz<<endl;
+       
 
           if (zz< 0.5/3)
           {
