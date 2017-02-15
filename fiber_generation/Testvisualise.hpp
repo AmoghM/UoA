@@ -75,6 +75,11 @@ public:
 
           else if (zz>=(0.5/3) && zz<=(1.0/3)) 
           {
+          
+          //Rotation along z axis: https://en.wikipedia.org/wiki/Rotation_matrix
+          //http://www.continuummechanics.org/rotationmatrix.html
+          //https://www.siggraph.org/education/materials/HyperGraph/modeling/mod_tran/3drota.htm#X-Axis Rotation
+          
              double res_cos=cos ( angle * M_PI / 180.0 );
              double res_sin=sin( angle * M_PI / 180.0 );
           
