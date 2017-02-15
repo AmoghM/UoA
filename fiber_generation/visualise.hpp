@@ -28,51 +28,6 @@ public:
             fibre_direction.push_back(0);
             fibre_direction.push_back(1);
        }
-       
-       // std::vector<c_vector<double,3u> > fibre_directions;
-       // std::vector<c_vector<double,3u> > sheet_directions;
-       // std::vector<c_vector<double,3u> > cross_directions;
-
-       //  string line;
-       //  ifstream myfile("cube_mesh2.1.ortho");
-       //  if(myfile.is_open())
-       //  {
-       //      while(getline(myfile, line))
-       //      {
-             
-       //          string disk=line;
-       //          vector<string> cds;
-       //          stringstream s (disk);
-       //          while(s>>temp)
-       //          {   cds.push_back(temp);}
-
-       //          vector<string>::iterator v = cds.begin();
-       //          int count=1;
-       //          while( v != cds.end()) 
-       //          {
-                    
-       //              if(count<=3)
-       //              {
-       //                  sheet_direction.push_back(*v)
-       //              }
-
-       //              else if(count<=6)
-       //              {
-       //                  cross_direction.push_back(*v);
-       //              }
-
-       //              else
-       //                  fibre_direction.push_back(*v);
-       //            count++;
-       //            v++;
-       //          }
-
-       //          sheet_directions.push_back(sheet_direction);
-       //          cross_directions.push_back(cross_direction);
-       //          fibre_directions.push_back(fibre_direction);
-
-       // }
-
         TrianglesMeshReader<2,2> mesh_reader("cube_mesh2.1");
         TetrahedralMesh<2,2> mesh; 
         mesh.ConstructFromMeshReader(mesh_reader);
