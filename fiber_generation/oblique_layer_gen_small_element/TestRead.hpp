@@ -42,17 +42,7 @@ public:
         double angle=30;
         for(AbstractTetrahedralMesh<3,3>::ElementIterator elt_iter=mesh.GetElementIteratorBegin(); elt_iter!=mesh.GetElementIteratorEnd();++elt_iter)
         {
-          sheet_direction(0)=1;
-          sheet_direction(1)=0;
-          sheet_direction(2)=0;
-
-          cross_direction(0)=0;
-          cross_direction(1)=1;
-          cross_direction(2)=0;
-
-          fibre_direction(0)=0;
-          fibre_direction(1)=0;
-          fibre_direction(2)=1;
+       
 
           double xx=(elt_iter->CalculateCentroid())(0);
           double yy=(elt_iter->CalculateCentroid())(1);
