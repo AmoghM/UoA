@@ -1,4 +1,3 @@
 using the tretgen command syntax to generate more tetrahedral elements in the same cuboidal geometry.
 tetgen -pq1.2 cuboid2.smesh (wrong)
 tetgen -pa0.01 cuboid2.ply (right)
-necesaary
