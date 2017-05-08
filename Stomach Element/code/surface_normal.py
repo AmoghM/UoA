@@ -40,9 +40,9 @@ def face_reader():
 		for line in face:
 			line=' '.join(line.split())
 			index=line.split(" ")
-			p1=nodes[int(index[1])]
-			p2=nodes[int(index[2])]
-			p3=nodes[int(index[3])]
+			p1=nodes[int(index[1])-1]
+			p2=nodes[int(index[2])-1]
+			p3=nodes[int(index[3])-1]
 
 			surface_normal.append(normal(p1,p2,p3))
 	return surface_normal
